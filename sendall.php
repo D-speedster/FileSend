@@ -48,8 +48,8 @@ if(file_get_contents("botstatus/senduser.txt") == null){
 }
 $member2 = mysqli_fetch_all($SelectAllUsers);
 $member = file_get_contents("botstatus/senduser.txt");
-$sendcount = 100;
-$sendcount2 = 300;
+$sendcount = 150;
+$sendcount2 = 500;
 $dash = $member + $sendcount;
 $dash2 = $member + $sendcount2;
 } 
