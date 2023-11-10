@@ -71,23 +71,19 @@ file_get_contents("https://sparta021.top/FileSend/apisend.php?send=forward&token
 if($stats2 == 'true'){
 file_put_contents("botstatus/senduser.txt",$dash2);
 $sended = 0;
-// Split the users into batches of 200
-$userBatches = array_chunk($member2, 200);
+for($i = 0; $i < ($sendcount2/200); $i++){
 
-// Send the message to each batch of users in parallel
-foreach ($userBatches as $userBatch) {
-    // Create a new process to send the message to the batch of users
-    $process = new Process('curl https://sparta021.top/FileSend/apisend.php?send=send&token=' . API_KEY . '&users=' . json_encode($userBatch));
+    $sended_now = $member+$sended;
+    $userss = [];
+    for ($s = $sended_now; $s <= ($sended_now+200); $s++)
+    {
+        $userss[] = $member2[$s][0];
+    }
+    
+    file_get_contents("https://sparta021.top/FileSend/apisend.php?send=send&token=".API_KEY."&users=".json_encode($userss));
+    $sended += 200;
 
-    // Start the process
-    $process->start();
 }
-
-// Wait for all processes to finish
-foreach ($userBatches as $userBatch) {
-    $process->wait();
-}
-
 
 }
 
