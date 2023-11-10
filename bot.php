@@ -1,7 +1,10 @@
 <?php
 
-@mkdir("botstatus");
-@mkdir("users_multi_files");
+mkdir("botstatus");
+chmod(0777, "botstatus");
+
+mkdir("users_multi_files");
+chmod(0777, "users_multi_files");
 
 date_default_timezone_set('Asia/Tehran');
 
