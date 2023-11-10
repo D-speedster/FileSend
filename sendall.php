@@ -5,7 +5,7 @@ set_time_limit(0);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $Database = [
     'dbname' => "bot_filesend", // put database name
-    'username' => "bot_filesend", // put database username
+    'username' => "root", // put database username
     'password' => "lXZK7F0*1rXY9*80vK" // put database password
 ];
 $MySQLi = mysqli_connect('localhost', $Database['username'], $Database['password'], $Database['dbname']);
