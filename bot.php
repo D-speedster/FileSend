@@ -1,12 +1,8 @@
 <?php
 
-if (!is_dir("botstatus")) {
-    mkdir("botstatus");
-}
+@mkdir("botstatus");
+@mkdir("users_multi_files");
 
-if (!is_dir("users_multi_files")) {
-    mkdir("users_multi_files");
-}
 date_default_timezone_set('Asia/Tehran');
 
 set_time_limit(0);
