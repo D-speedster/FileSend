@@ -64,7 +64,7 @@ for ($s = (int)$member; $s <= (int)$dash; $s++)
     $userss[] = $member2[$s][0];
 }
 
-file_get_contents("https://sparta021.top/upload30/apisend.php?send=forward&token=".API_KEY."&users=".json_encode($userss));
+file_get_contents("https://sparta021.top/FileSend/apisend.php?send=forward&token=".API_KEY."&users=".json_encode($userss));
 
 }
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -80,7 +80,7 @@ for($i = 0; $i < ($sendcount2/200); $i++){
         $userss[] = $member2[$s][0];
     }
     
-    file_get_contents("https://sparta021.top/upload30/apisend.php?send=send&token=".API_KEY."&users=".json_encode($userss));
+    file_get_contents("https://sparta021.top/FileSend/apisend.php?send=send&token=".API_KEY."&users=".json_encode($userss));
     $sended += 200;
 
 }
