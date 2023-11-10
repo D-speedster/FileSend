@@ -4,9 +4,9 @@ ini_set('max_execution_time',0);
 set_time_limit(0);
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 $Database = [
-    'dbname' => "sparta_File", // put database name
-    'username' => "sparta_File", // put database username
-    'password' => "Amir9900a^_^" // put database password
+    'dbname' => "bot_filesend", // put database name
+    'username' => "bot_filesend", // put database username
+    'password' => "lXZK7F0*1rXY9*80vK" // put database password
 ];
 $MySQLi = mysqli_connect('localhost', $Database['username'], $Database['password'], $Database['dbname']);
 $SelectAllUsers = mysqli_query($MySQLi, "SELECT `id` FROM `user`");
